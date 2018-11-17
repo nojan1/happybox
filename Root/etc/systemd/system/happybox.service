@@ -1,0 +1,13 @@
+[Unit]
+Description=Happybox service
+
+[Service]
+ExecStart=/usr/bin/python3 /boot/happybox/main.py
+WorkingDirectory=/boot/happybox/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
