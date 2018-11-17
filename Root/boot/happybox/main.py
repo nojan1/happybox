@@ -12,10 +12,6 @@ def setupButton(pin):
 
 buttons = [setupButton(x) for x in [board.D17, board.D22, board.D27, board.D23]]
 
-logoLight = 00
-GPIO.setup(logoLight, GPIO.OUT)
-GPIO.output(logoLight, 1)
-
 logo = digitalio.DigitalInOut(board.D23)
 logo.direction = digitalio.Direction.output
 logo.value = True
