@@ -113,7 +113,7 @@ sudo python3 ./setup.py install
 
 ```
 git clone https://github.com/nojan1/happybox.git
-cd happybox/Root
+cd happybox/root
 sudo cp -R * /
 sudo systemctl enable happybox
 sudo systemctl start happybox
