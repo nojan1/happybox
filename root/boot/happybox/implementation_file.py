@@ -1,13 +1,13 @@
 from implementation_base import ImplementationBase
 
-import os
+import datetime
 
 class Implementation(ImplementationBase):
     def __init__(self):
-        pass
+        self.file = open("presses.txt", "w+")
 
     def AllGood(self):
         return True
 
     def HandleValue(self, buttonNumber, errorDetected):
-        pass
+        self.file.write(datetime.datetime.utcnow() + " " + str(buttonNumber) + "\n")

@@ -1,6 +1,8 @@
 import digitalio
 import time
 
+DEBOUNCE_TIME = 0.05
+
 class Button(object):
     def __init__(self, pin):
         self.button = digitalio.DigitalInOut(pin)
@@ -14,7 +16,7 @@ class Button(object):
         if not self.button.value:
             if self.timeDown == None:
                 self.timeDown = time.time()
-            else if time.time() - self.timeDown >= 0.05 and not self.inhibit:
+            elif time.time() - self.timeDown >= DEBOUNCE_TIME and not self.inhibit:
                 self.inhibit = True
                 return True
         else:
