@@ -10,4 +10,4 @@ class Implementation(ImplementationBase):
         return True
 
     def HandleValue(self, buttonNumber, errorDetected):
-        self.file.write(datetime.datetime.utcnow() + " " + str(buttonNumber) + "\n")
+        self.file.write(str(datetime.datetime.utcnow()) + " " + str(buttonNumber) + "\n")
